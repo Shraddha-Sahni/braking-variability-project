@@ -287,4 +287,4 @@ Thapar Institute of Engineering and Technology for academic support
 Department of Computer Science and Engineering for guidance
 
 ### GitHub badge
-[![GitHub stars](https://img.shields.io/github/stars/Shraddha-Sahni/braking-variability)](https://github.com/Shraddha-Sahni braking-variability-project.git)
+(https://github.com/Shraddha-Sahni braking-variability-project.git)
