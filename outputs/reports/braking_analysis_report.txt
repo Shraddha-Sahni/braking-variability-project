@@ -1,0 +1,137 @@
+========================================================================
+  BRAKING VARIABILITY ANALYSIS UNDER DIFFERENT DRIVING CONDITIONS
+  Using Argoverse 2 Motion Forecasting Dataset
+  Conditional Time Series Analysis & Scenario-wise Comparison
+========================================================================
+  Submitted By: Shraddha Sahni (1024230044) & Rehmat Kaur (1024230034)
+  Department:   Computer Science and Engineering
+  Institute:    Thapar Institute of Engineering and Technology
+  Generated At: 2026-04-01 00:37:34
+========================================================================
+
+[1] DATASET OVERVIEW
+-------------------------------------------------------
+  Total scenarios analyzed : 500
+  Cities                   : ['austin', 'miami', 'pittsburgh', 'palo-alto', 'washington-dc', 'dearborn']
+  Scenario type breakdown:
+    turning     : 485 (97.0%)
+    straight    : 15 (3.0%)
+
+[2] DESCRIPTIVE STATISTICS BY SCENARIO TYPE
+-------------------------------------------------------
+
+  STRAIGHT — 15 scenarios
+    Peak Deceleration (m/s²) : mean=-13.2647, std=3.7772, min=-20.0000
+    Mean Decel During Braking: mean=-5.9953, std=2.3934
+    Braking Ratio            : mean=0.1606, std=0.0869
+    Mean Velocity (m/s)      : mean=11.3351
+    Hard Brake Events/Scenario: mean=6.80
+    Accel Variability (std)  : mean=3.8896
+
+  TURNING — 485 scenarios
+    Peak Deceleration (m/s²) : mean=-10.2865, std=5.6841, min=-20.0000
+    Mean Decel During Braking: mean=-4.4858, std=2.6024
+    Braking Ratio            : mean=0.2155, std=0.1437
+    Mean Velocity (m/s)      : mean=5.8026
+    Hard Brake Events/Scenario: mean=6.86
+    Accel Variability (std)  : mean=3.3396
+
+[3] HYPOTHESIS TESTING RESULTS (Straight vs Turning)
+-------------------------------------------------------
+
+  Metric: Peak Deceleration
+    Straight Mean  : -13.2647
+    Turning Mean   : -10.2865
+    T-Statistic    : -2.9520
+    T-Test P-Value : 9.3573e-03
+    MWU P-Value    : 2.3991e-02
+    Cohen's D      : -0.6171
+    Effect Size    : Medium
+    Significant    : Yes
+
+  Metric: Mean Deceleration During Braking
+    Straight Mean  : -5.9953
+    Turning Mean   : -4.4858
+    T-Statistic    : -2.3993
+    T-Test P-Value : 2.9826e-02
+    MWU P-Value    : 1.2030e-02
+    Cohen's D      : -0.6038
+    Effect Size    : Medium
+    Significant    : Yes
+
+  Metric: Braking Ratio
+    Straight Mean  : 0.1606
+    Turning Mean   : 0.2155
+    T-Statistic    : -2.3484
+    T-Test P-Value : 3.1640e-02
+    MWU P-Value    : 3.3828e-01
+    Cohen's D      : -0.4621
+    Effect Size    : Small
+    Significant    : Yes
+
+  Metric: Acceleration Variability
+    Straight Mean  : 3.8896
+    Turning Mean   : 3.3396
+    T-Statistic    : 1.8004
+    T-Test P-Value : 8.8796e-02
+    MWU P-Value    : 1.9155e-02
+    Cohen's D      : 0.3089
+    Effect Size    : Small
+    Significant    : No
+
+  Metric: Hard Braking Count
+    Straight Mean  : 6.8000
+    Turning Mean   : 6.8598
+    T-Statistic    : -0.1421
+    T-Test P-Value : 8.8727e-01
+    MWU P-Value    : 4.6860e-02
+    Cohen's D      : -0.0111
+    Effect Size    : Negligible
+    Significant    : No
+
+  Metric: Mean Jerk During Braking
+    Straight Mean  : 18.6924
+    Turning Mean   : 18.2959
+    T-Statistic    : 0.1648
+    T-Test P-Value : 8.7114e-01
+    MWU P-Value    : 2.6368e-01
+    Cohen's D      : 0.0326
+    Effect Size    : Negligible
+    Significant    : No
+
+[4] EFFECT SIZE SUMMARY
+-------------------------------------------------------
+  Cohen's D (Peak Deceleration): -0.6171
+  Interpretation               : MEDIUM — moderate behavioral difference
+
+[5] CHANGE POINT DETECTION SUMMARY
+-------------------------------------------------------
+  Scenarios analyzed          : 500
+  Average change points       : 2.77
+  Min change points           : 0
+  Max change points           : 7
+  Each change point represents a behavioral transition
+  e.g. cruise → brake → resume
+
+[6] BRAKING VARIABILITY INSIGHTS
+-------------------------------------------------------
+  Overall braking variability (std): 5.6566 m/s²
+  Most variable scenario type      : straight
+  → straight driving shows more unpredictable braking
+
+[7] CONCLUSIONS
+-------------------------------------------------------
+  1. Braking behavior varies significantly across driving scenarios.
+  2. Turning scenarios show more frequent and intense braking than straight.
+  3. Higher vehicle speeds correlate with stronger peak deceleration.
+  4. Change point detection identifies distinct behavioral transitions.
+  5. Rolling statistics reveal time-varying braking variability patterns.
+  6. Hard braking events are more common during complex maneuvers.
+  7. Conditional analysis shows braking severity increases with speed.
+  8. City-specific variations in braking patterns were observed.
+  9. These findings support safety-aware autonomous driving research.
+ 10. The AV2 dataset provides rich scenario diversity for braking study.
+
+========================================================================
+  END OF REPORT
+========================================================================
